@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 600px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+#start-message,
+#game-over-message,
+#restart-message {
+    position: absolute;
+    width: 100%;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+}
+
+#start-message,
+#game-over-message,
+#restart-message {
+    top: 45px;
+}
+
+#game-over-message,
+#restart-message {
+    display: none;
+}
+
+.started #start-message,
+.game-over #start-message {
+    display: none;
+}
+
+.game-over #game-over-message {
+    display: block;
+}
+
+.game-over #restart-message {
+    display: block;
+    top: 70px;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/standing_still.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 18px;
+    left: 50px;
+}
+
+.jump {
+    animation: jumpAnimation 0.5s linear;
+}
+
+@keyframes jumpAnimation {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+#cactus {
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/cactus_1.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 18px;
+    left: 600px;
+}
+
+.started #cactus {
+    animation: cactusMove 1.5s infinite linear;
+}
+
+#ground {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 18px;
+    background-image: url("../images/ground.png");
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background-size: auto 18px;
+}
+
+@keyframes cactusMove {
+    0% { left: 600px; }
+    100% { left: -20px; }
+}
