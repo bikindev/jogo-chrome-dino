@@ -1,0 +1,20 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor e ambiente local
+.vscode/
+
+# Dependencias e arquivos gerados
+node_modules/
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+
+# Variaveis de ambiente locais
+.env
+.env.*
+!.env.example
