@@ -61,7 +61,7 @@ function startCollisionCheck() {
         // Verifica se o cacto está na APROXIMADAMENTE na posição do dinossauro (sempre fixa) e se o dino está no chão
         // a colisão é detectada quando o cacto está entre 40 e 80 pixels da esquerda
         // e a posição do dinossauro na vertical é menor que 40 pixels (ou seja, ele não está pulando)
-        if (cactusLeft > 40 && cactusLeft < 80 && dinoBottom < 40) {
+        if (cactusLeft > 50 && cactusLeft < 80 && dinoBottom < 40) {
             gameStarted = false; // jogo encerrado
             gameOver = true; 
             clearInterval(dinoRunInterval); // animação de corrida é interrompida
