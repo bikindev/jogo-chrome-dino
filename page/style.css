@@ -19,17 +19,12 @@ body {
 #start-message,
 #game-over-message,
 #restart-message {
+    top: 45px;
     position: absolute;
     width: 100%;
     color: #555;
     font-size: 16px;
     text-align: center;
-}
-
-#start-message,
-#game-over-message,
-#restart-message {
-    top: 45px;
 }
 
 #game-over-message,
