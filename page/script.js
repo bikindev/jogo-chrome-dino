@@ -10,9 +10,9 @@ let checkCollision;
 
 function alternateCactusImages() {
     const cactusImages = [
-        'url("../images/cactus_1.png")',
-        'url("../images/cactus_2.png")',
-        'url("../images/cactus_3.png")'
+        'url("images/cactus_1.png")',
+        'url("images/cactus_2.png")',
+        'url("images/cactus_3.png")'
     ];
     let currentCactusImage = 0;
 
@@ -32,8 +32,8 @@ function alternateDinoImages() {
         }
 
         dino.style.backgroundImage = isFirstRunImage
-            ? 'url("../images/dino_run1.png")'
-            : 'url("../images/dino_run2.png")';
+            ? 'url("images/dino_run1.png")'
+            : 'url("images/dino_run2.png")';
         isFirstRunImage = !isFirstRunImage;
     }, 150);
 }
@@ -52,7 +52,7 @@ function startCollisionCheck() {
             gameStarted = false;
             gameOver = true;
             clearInterval(dinoRunInterval);
-            dino.style.backgroundImage = 'url("../images/standing_still_eye_closed.png")';
+            dino.style.backgroundImage = 'url("images/standing_still_eye_closed.png")';
             cactus.style.animation = "none";
             cactus.style.left = cactusLeft + "px";
             clearInterval(cactusImageInterval);
@@ -78,8 +78,8 @@ function resetGame() {
     clearInterval(cactusImageInterval);
     dinoIsJumping = false;
     dino.classList.remove("jump");
-    dino.style.backgroundImage = 'url("../images/standing_still.png")';
-    cactus.style.backgroundImage = 'url("../images/cactus_1.png")';
+    dino.style.backgroundImage = 'url("images/standing_still.png")';
+    cactus.style.backgroundImage = 'url("images/cactus_1.png")';
     cactus.style.animation = "";
     cactus.style.left = "600px";
 }
@@ -87,12 +87,12 @@ function resetGame() {
 function jump() {
     if (!dino.classList.contains("jump")) {
         dinoIsJumping = true;
-        dino.style.backgroundImage = 'url("../images/standing_still_eye_closed.png")';
+        dino.style.backgroundImage = 'url("images/standing_still_eye_closed.png")';
         dino.classList.add("jump");
         setTimeout(() => {
             dino.classList.remove("jump");
             dinoIsJumping = false;
-            dino.style.backgroundImage = 'url("../images/dino_run1.png")';
+            dino.style.backgroundImage = 'url("images/dino_run1.png")';
         }, 500);
     }
 }
